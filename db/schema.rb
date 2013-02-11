@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130126140317) do
+ActiveRecord::Schema.define(:version => 20130211112126) do
 
   create_table "contacts", :force => true do |t|
     t.string   "name",       :null => false
@@ -60,18 +60,21 @@ ActiveRecord::Schema.define(:version => 20130126140317) do
   end
 
   create_table "people", :force => true do |t|
-    t.string   "email",           :default => ""
+    t.string   "email",                           :default => ""
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "full_name"
     t.string   "facebook_uid"
     t.string   "github_uid"
-    t.boolean  "publicized",      :default => false
-    t.integer  "irc_points",      :default => 0
+    t.boolean  "publicized",                      :default => false
+    t.integer  "irc_points",                      :default => 0
     t.string   "irc_nickname"
     t.string   "github_nickname"
     t.string   "rss_url"
     t.text     "description"
+    t.boolean  "remainder_day_before_drug"
+    t.boolean  "remainder_at_day_of_drug"
+    t.boolean  "remainder_even_if_not_attending"
   end
 
   create_table "people_presentations", :force => true do |t|

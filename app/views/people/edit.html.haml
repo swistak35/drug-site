@@ -18,6 +18,17 @@
       .field
         = f.label :description
         = f.text_area :description
+      %h2
+        Remainders
+      .field
+        = f.label :remainder_day_before_drug
+        = f.check_box :remainder_day_before_drug
+      .field
+        = f.label :remainder_at_day_of_drug
+        = f.check_box :remainder_at_day_of_drug
+      .field
+        = f.label :remainder_even_if_not_attending
+        = f.check_box :remainder_even_if_not_attending
       = f.submit
 
 

@@ -1,7 +1,8 @@
 class Person < ActiveRecord::Base
   class AlreadySignedException < StandardError; end
 
-  attr_accessible :full_name, :irc_nickname, :rss_url, :description
+  attr_accessible :full_name, :irc_nickname, :rss_url, :description, :remainder_day_before_drug,
+    :remainder_at_day_of_drug, :remainder_even_if_not_attending
 
   has_and_belongs_to_many :presentations, foreign_key: :person_id
   has_many :participations, dependent: :destroy
