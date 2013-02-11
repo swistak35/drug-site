@@ -1,0 +1,10 @@
+There will be <%= @event.title %> today.
+Are you ready for that?
+Be at 19 in <%= @event.venue_name_with_address %>.
+
+We will be talking about:
+<% @event.presentations.not_postponed.each do |presentation| %>
+  <%= presentation.title %> (<%= presentation.lead_speaker_full_name %>)
+<% end %>
+
+After official part, as always, there will be unofficial part with moar beer.

@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <h1><%= @event.title %></h1>
+  <h2 style="font-style:italic">is coming</h2>
+
+  Today, at 19 in <span style='font-weight:bold'><%= @event.venue_name_with_address %></span>.
+  We will be talking about:<br>
+  <% @event.presentations.not_postponed.each do |presentation| %>
+    <span style='font-weight:bold'><%= presentation.title %></span> (<%= presentation.lead_speaker_full_name %>)<br>
+  <% end %>
+  <br>
+  After official part, as always, there will be unofficial part with moar beer.
+  <br>
+  <br>
+  And since you are programmer, here is nice cat photo for you:<br>
+  <img src="http://placekitten.com/g/<%= @width %>/<%= @height %>"/>
+</div>
