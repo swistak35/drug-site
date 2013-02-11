@@ -10,3 +10,8 @@
 every 1.day, at: '5:00 am' do
   runner 'site=DrugSite.new;site.keep_upcoming_event_alive'
 end
+
+every 1.day, at: '7:00am' do
+  rake "remainders:day_before"
+  rake "remainders:at_day_of"
+end
