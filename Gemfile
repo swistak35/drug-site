@@ -36,6 +36,7 @@ group :development do
   gem 'awesome_print'
   gem 'factory_girl_rails', require: false
   gem 'minitest-rails'
+  gem 'letter_opener'
 end
 
 group :production do

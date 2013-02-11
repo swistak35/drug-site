@@ -37,4 +37,6 @@ Drug::Application.configure do
 
   # Local domain
   config.action_mailer.default_url_options = { :host => "drug.dev" }
+
+  config.action_mailer.delivery_method = :letter_opener
 end

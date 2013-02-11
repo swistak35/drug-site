@@ -11,7 +11,7 @@ class Presentation < ActiveRecord::Base
   scope :not_postponed, where("status != 'postponed'")
   scope :done,          where(status: 'done')
 
-  delegate :full_name, to: :person, prefix: true
+  delegate :full_name, to: :lead_speaker, prefix: true
   delegate :title, to: :event, prefix: true
 
   def postpone!
